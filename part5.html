@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>To Kathlyn – Almost There</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: #fffaf5;
+            padding: 2rem;
+            color: #4b3e2e;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            color: #a15b5b;
+            font-size: 2.5rem;
+        }
+
+        p {
+            max-width: 600px;
+            margin: auto;
+            font-size: 1.2rem;
+            line-height: 1.7;
+        }
+
+        #countdown {
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+            color: #b46b6b;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Here’s to Us ❤️</h1>
+    <p>
+        This is just the beginning, po. Thank you for being here, for being patient, kind, and understanding, baby.<br><br>
+        I'm so lucky to have you, po, such a nice, caring, and beautiful girlfriend. <br><br>
+    </p>
+    <p>
+        With love, from <img src="images/brazil_flag.png" alt="Brazil Flag" style="width: 1.2em; vertical-align: middle;"> Brazil <img src="images/whatsapp_icon.png" alt="WhatsApp Icon" style="width: 1.2em; vertical-align: middle;"> to the <img src="images/philippines_flag.png" alt="Philippines Flag" style="width: 1.2em; vertical-align: middle;"> Philippines — always.
+    </p>
+
+    <p id="countdown"></p>
+
+    <script>
+        let seconds = 12; // Mantendo 12 segundos conforme sua atualização
+        const el = document.getElementById('countdown');
+        el.textContent = `${seconds}...`;
+
+        const timer = setInterval(() => {
+            seconds--;
+            if (seconds > 0) {
+                el.textContent = `${seconds}...`;
+            } else {
+                clearInterval(timer);
+                // redireciona para part6.html
+                window.location.href = "part6.html";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

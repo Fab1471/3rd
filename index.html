@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>You've Got a New Letter 💌</title>
+  <link rel="icon" href="index_favicon.ico" type="image/x-icon">
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #fffaf3;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .envelope {
+      font-size: 8rem;
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-20px); }
+    }
+    .subtitle {
+      font-size: 1.25rem;
+      color: #4b3e2e;
+      margin-top: 1rem;
+    }
+    .subtitle-ci {
+      font-size: 1rem;
+      font-style: italic;
+      color: #4b3e2e;
+      margin-top: .5rem;
+    }
+    .button {
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      background: #b46b6b;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="envelope">📨</div>
+  <p class="subtitle">Something special is waiting…</p>
+  <p class="subtitle-ci">Gihigugma tika, bisan layo ta.</p>
+  <a href="p_transition.html" class="button">Open Me!</a>
+</body>
+</html>

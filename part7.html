@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moments</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+        body {
+            margin: 0;
+            padding: 2rem;
+            font-family: sans-serif;
+            background: #fffaf5;
+            color: #4b3e2e;
+            text-align: center;
+        }
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 480px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+        #countdown {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            color: #b46b6b;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Moments</h1>
+    <div class="gallery">
+        <img src="images/moments/moment1.jpeg" alt="Moment 1">
+        <img src="images/moments/moment2.jpeg" alt="Moment 2">
+        <img src="images/moments/moment3.jpeg" alt="Moment 3">
+        <img src="images/moments/moment4.jpeg" alt="Moment 4">
+        <img src="images/moments/moment5.jpeg" alt="Moment 5">
+        <img src="images/moments/moment6.jpeg" alt="Moment 6">
+        <img src="images/moments/moment7.jpeg" alt="Moment 7">
+        <img src="images/moments/moment8.jpeg" alt="Moment 8">
+        <img src="images/moments/moment9.jpeg" alt="Moment 9">
+    </div>
+    <p id="countdown"></p>
+
+    <script>
+        let seconds = 12;
+        const countdownElement = document.getElementById('countdown');
+        countdownElement.textContent = `Redirecting in ${seconds} seconds...`;
+
+        const interval = setInterval(function() {
+            seconds--;
+            countdownElement.textContent = `Redirecting in ${seconds} seconds...`;
+
+            if (seconds < 0) {
+                clearInterval(interval);
+                window.location.href = "part8_ending.html";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Kathlyn 💌 – Ending</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fffaf5;
+            color: #4b3e2e;
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .final-message {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.8rem; /* Aumentando o tamanho base */
+            color: #a15b5b;
+            opacity: 0; /* Inicialmente invisível */
+            transform: scale(0.5); /* Começa com metade do tamanho */
+            animation: scaleUpFadeIn 2s ease-in-out forwards, decreaseFontSize 2s ease-in-out forwards; /* Animações combinadas */
+        }
+
+        .final-message span:first-child {
+            font-size: 3.4rem; /* Aumentando ainda mais a primeira frase */
+        }
+
+        @keyframes scaleUpFadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes decreaseFontSize {
+            from {
+                font-size: 3.4rem; /* Começa com o tamanho maior da primeira frase */
+            }
+            to {
+                font-size: 3.2rem; /* Termina com o novo tamanho base */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="final-message">
+        <span>Thank you for sharing these special moments with me.</span> <br><br> There are so many more to come. <br><br> I love you, Kathlyn!
+    </div>
+</body>
+</html>

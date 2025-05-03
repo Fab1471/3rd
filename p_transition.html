@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Opening…</title>
+  <style>
+    body { margin: 0; height: 100vh; display: flex; flex-direction: column;
+      justify-content: center; align-items: center; background: #ececec; overflow: hidden; }
+    .support {
+      font-family: sans-serif;
+      color: #4b3e2e;
+      margin-bottom: 1rem;
+    }
+    .envelope {
+      position: relative;
+      width: 350px; height: 250px;
+      background: #fff; border: 2px solid #8b5d33;
+      border-radius: 4px 4px 2px 2px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      overflow: hidden;
+    }
+    .envelope::before {
+      content: ""; position: absolute; top: -125px; left: 0;
+      width: 350px; height: 125px;
+      background: #d2b48c;
+      clip-path: polygon(0% 100%,50% 0%,100% 100%);
+      border: 2px solid #8b5d33;
+      transform-origin: bottom center;
+      animation: openFlap 5s ease forwards;
+    }
+    .letter {
+      position: absolute; bottom: -100%; left: 0;
+      width: 100%; height: 100%; background: #fff9f0;
+      animation: slideUp 5s ease forwards;
+    }
+    @keyframes openFlap { 0% {transform: rotateX(0);} 100% {transform: rotateX(-180deg);} }
+    @keyframes slideUp  { 0% {bottom: -100%;} 80% {bottom: 10%;} 100% {bottom: 0;} }
+  </style>
+</head>
+<body>
+  <p class="support">Wait. Love is bending space and time for you…</p>
+  <div class="envelope">
+    <div class="letter"></div>
+  </div>
+  <script>
+    setTimeout(() => window.location.href = "part1.html", 4500);
+  </script>
+</body>
+</html>

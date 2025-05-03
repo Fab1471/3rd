@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>To Kathlyn 💌</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap');
+
+        body {
+            margin: 0;
+            padding: 2rem;
+            font-family: 'Open Sans', sans-serif;
+            background: #fdfaf6 url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+            color: #4b3e2e;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: #fff8f1;
+            padding: 2rem;
+            border: 1px solid #e6dccc;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5rem;
+            text-align: center;
+            color: #b46b6b;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .signature {
+            margin-top: 2rem;
+            text-align: right;
+            font-family: 'Great Vibes', cursive;
+            font-size: 1.8rem;
+            color: #a05151;
+        }
+
+        .heart {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            width: 30px;
+            height: 30px;
+            background: red;
+            transform: rotate(45deg);
+            animation: pulse 1.5s infinite;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: red;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -15px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: -15px;
+            top: 0;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: rotate(45deg) scale(1);
+            }
+            50% {
+                transform: rotate(45deg) scale(1.2);
+            }
+        }
+
+        .countdown {
+            font-size: 1.5rem;
+            color: #b46b6b;
+            margin-top: 20px;
+        }
+
+        audio {
+            position: fixed;
+            top: -100px; /* Esconde o player fora da tela */
+            left: -100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heart"></div>
+        <h1>My beautiful Kathlyn…</h1>
+        <audio autoplay loop>
+            <source src="/media/Sarah Geronimo — Isa Pang Araw.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <p>
+            These past three months have been a journey full of warmth, learning, and love.
+        </p>
+        <p>
+            Just like the emotions that fill me when I hear Sarah Geronimo sing "Isa Pang Araw", even though we’re separated by oceans and time zones, I feel your presence in my life every single day.
+        </p>
+        <p>
+            I cherish every call, every shared smile on the screen, every time we talk about our future. You make distance feel smaller and love feel bigger.
+        </p>
+        <p>
+            I admire your heart, your patience, and the way you brighten even my darkest days. You’re my reminder that love transcends borders, and that soulmates find a way.
+        </p>
+        <p>
+            This is just the beginning of our story — and I can’t wait to write many more chapters with you.
+        </p>
+        <p class="signature">
+            With all my love,<br>
+            Fabri 💖
+        </p>
+        <p class="countdown" id="countdown"></p>
+    </div>
+
+    <script>
+        let countdown = 55; // 55 seconds countdown
+        const countdownElement = document.getElementById('countdown');
+
+        const interval = setInterval(function() {
+            countdownElement.textContent = `Redirecting in ${countdown} seconds...`;
+            countdown--;
+
+            if (countdown < 0) {
+                clearInterval(interval);
+                window.location.href = "part5.html"; // Redirect to part5.html
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

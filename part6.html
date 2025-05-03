@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Just for You</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #fffaf5;
+            font-family: 'Great Vibes', cursive;
+            color: #a15b5b;
+            text-align: center;
+            padding: 1rem;
+        }
+        .message {
+            font-size: 2rem;
+            max-width: 90%;
+            line-height: 1.3;
+            border: 2px solid #a15b5b;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        .countdown {
+            font-size: 1.5rem;
+            font-family: sans-serif;
+            color: #b46b6b;
+            margin: 0.5rem 0;
+        }
+        .legend {
+            font-size: 1.41rem; /* Aumento ligeiro no tamanho da fonte */
+            font-family: sans-serif;
+            color: #4b3e2e;
+            opacity: 0.8;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="message">
+        iloveyou, po, gwapa, Kakat, love, girlfriend, mwamwa
+    </div>
+    <br>
+    <p class="countdown" id="countdown">5...</p>
+    <p class="legend">Thank you for the Special Moments po, love!</p>
+
+    <script>
+        let seconds = 5;
+        const cd = document.getElementById('countdown');
+        const interval = setInterval(() => {
+            seconds--;
+            if (seconds > 0) {
+                cd.textContent = `${seconds}...`;
+            } else {
+                clearInterval(interval);
+                window.location.href = "part7.html";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

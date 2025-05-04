@@ -31,9 +31,10 @@
             width: 100%;
             height: auto;
             aspect-ratio: 1 / 1;
-            object-fit: cover;
+            object-fit: contain; /* Alterado para contain */
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-height: 300px;
         }
         @media (max-width: 768px) {
             .gallery {
